@@ -40,6 +40,7 @@ compinit
 # End of lines added by compinstall
 alias la="ls -la --color=auto"
 alias ls='ls --color=tty'
+alias musicDownloadTui="/home/will/shellscripts/musicDownloadTui.sh"
 
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
