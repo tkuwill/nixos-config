@@ -15,6 +15,7 @@ sudo nix-channel --remove nixos
 sudo nix-channel --add https://nixos.org/channels/nixos-XX.XX nixos
 ```
 See [Chapter 4. Upgrading NixOS][] to check the latest channel.
+
 [Chapter 4. Upgrading NixOS]: https://nixos.org/manual/nixos/stable/#sec-upgrading
 2. Update the channel
 ```bash
