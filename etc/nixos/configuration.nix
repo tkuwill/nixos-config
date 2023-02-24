@@ -122,6 +122,7 @@
      # cli tools
      lm_sensors
      acpi
+     dialog
      # video player
      yt-dlp
      mpv
