@@ -111,6 +111,7 @@
      xclip
      cmus
      easytag
+     gpodder
      tree
      bat
      unar
