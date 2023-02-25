@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/will/.startupsh/lowbatremind.sh &
+Hidden=false
+Terminal=false
+OnlyShowIn=GNOME
+X-GNOME-Autostart-enabled=true
+Name=lowBatteryReminder
+Comment=custom script
