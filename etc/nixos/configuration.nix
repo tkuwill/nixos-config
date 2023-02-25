@@ -123,6 +123,7 @@
      lm_sensors
      acpi
      dialog
+     libnotify
      # video player
      yt-dlp
      mpv
@@ -136,6 +137,7 @@
      ## gnome programs
      gnomeExtensions.appindicator
      gnome.adwaita-icon-theme    
+     gnome.gnome-tweaks
    ];
 
   environment.gnome.excludePackages = (with pkgs; [
