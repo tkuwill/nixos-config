@@ -3,7 +3,7 @@ my personal nixos-config on an old ASUS laptop.
 
 ![](/screenshots/nixos.png)
 
-## Files
+#,# Files
 
 - [configuration.nix][]
 - [vifm][]
@@ -43,3 +43,18 @@ To update all packages declared in NixOS’ **configuration.nix**, use:
 ```bash
 sudo nixos-rebuild switch
 ```
+
+## How to use `live-server` in NixOS ?
+
+1. Check [Installing NPM Packages Globally in NixOS][] first.
+    - After installing `NPM` and doing the config for npm in shell's rc, run `npm install -g live-server`.
+2. Then check [live-server's config][].
+    - Remember that the file `.live-server.json` should put in your **home directory**. Set the **root** for live-server, then use the command `live-server` in that **root directory**. It should work smoothly.
+
+
+[Installing NPM Packages Globally in NixOS]: https://matthewrhone.dev/nixos-npm-globally
+[live-server's config]: https://github.com/tapio/live-server/issues/105
+
+
+
+
