@@ -128,6 +128,9 @@
      # video player
      yt-dlp
      mpv
+     mpvScripts.mpris
+     # For web-development
+     nodejs
      ##
      libreoffice-still-unwrapped
      # for wayland's programs
