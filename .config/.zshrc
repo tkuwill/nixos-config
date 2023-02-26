@@ -29,6 +29,7 @@ zstyle ':completion:*' menu yes select
 HISTFILE=~/.zsh_history
 HISTSIZE=99999
 SAVEHIST=99999
+HISTORY_IGNORE="(rm -rf|rm -rf .git|neofetch|vifm|musicDownloadTui|newsboat|free|uname -r|uname -a|free -h|df|df -h|htop|vim .vimrc|nmtui|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source ~/.zshrc|ls|cd|pwd|exit|cmus|la|bye|ping|mpv|yt-dlp|tmux|acpi|lazygit|live-server| ..)"
 unsetopt autocd extendedglob
 bindkey -e
 # End of lines configured by zsh-newuser-install
