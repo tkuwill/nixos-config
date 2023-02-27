@@ -1,6 +1,8 @@
 # nixos-config
 my personal nixos-config on an old ASUS laptop.
 
+![](/screenshots/rice.png)
+
 ![](/screenshots/nixos.png)
 
 ## Files
