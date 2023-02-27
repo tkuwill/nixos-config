@@ -34,17 +34,25 @@
   #   useXkbConfig = true; # use xkbOptions in tty.
   # };
 
-  # Enable the X11 windowing system.
+  # Enable the X11 windowing system. Windows manager and DE
+  
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true; 
+  services.xserver.windowManager.dwm.enable = true;
+  services.xserver.windowManager.awesome.enable = true;
+  # DWM, st, dmenu, slock custom build
+  nixpkgs.overlays = [
+     (final: prev: {
+       dwm = prev.dwm.overrideAttrs (old: { src = /home/will/dwm ;});
+      })       
+  ];
 
   # Service for gnome
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   # Service for thunar
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
-	
 
   # zsh's config
   programs.zsh.enable = true; 
@@ -82,11 +90,14 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
-
+  services.xserver.libinput.mouse.naturalScrolling = true;
+  services.xserver.libinput.touchpad.naturalScrolling = true;
+  # screen backlight
+   programs.light.enable = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
    users.users.will = {
      isNormalUser = true;
-     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+     extraGroups = [ "wheel" "audio" "video" ]; # Enable ‘sudo’ for the user. Also, audio and video
      packages = with pkgs; [
        firefox
        thunderbird
@@ -102,7 +113,6 @@
    environment.systemPackages = with pkgs; [
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
-     awesome
      htop
      neofetch
      vifm
@@ -120,11 +130,23 @@
      zsh
      rofi
      newsboat
+     arandr
+     dunst
+     pavucontrol
+     flameshot
+     playerctl
+     symbola
+     copyq
+     dmenu
+     i3lock-color
+     feh
      # cli tools
+     acpilight
      lm_sensors
      acpi
      dialog
      libnotify
+     w3m
      # video player
      yt-dlp
      mpv
@@ -133,15 +155,12 @@
      nodejs
      ##
      libreoffice-still-unwrapped
-     # for wayland's programs
-     foot
-     wofi
+     font-manager
      # thunar and its plugins
      xfce.thunar
      ## gnome programs
      gnomeExtensions.appindicator
      gnome.adwaita-icon-theme    
-     gnome.gnome-tweaks
    ];
 
   environment.gnome.excludePackages = (with pkgs; [
@@ -170,11 +189,23 @@
  ];
 
   # Input method ibus
-  i18n.inputMethod = {
-  enabled = "ibus";
-  ibus.engines = with pkgs.ibus-engines; [ mozc libpinyin ];
- };
-  
+#i18n.inputMethod = {
+# enabled = "ibus";
+# ibus.engines = with pkgs.ibus-engines; [ mozc libpinyin ];
+#};
+  # Input method fcitx5
+   i18n.inputMethod = {
+   enabled = "fcitx5";
+   fcitx5.addons = with pkgs; [
+       fcitx5-mozc
+       fcitx5-gtk
+       fcitx5-lua
+       fcitx5-chinese-addons
+
+    ];
+  };
+
+
   # Font
   fonts.fonts = with pkgs; [
   noto-fonts
