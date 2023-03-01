@@ -40,12 +40,13 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true; 
   services.xserver.windowManager.dwm.enable = true;
-  services.xserver.windowManager.awesome.enable = true;
+  #services.xserver.windowManager.awesome.enable = true;
   # DWM, st, dmenu, slock custom build
   nixpkgs.overlays = [
      (final: prev: {
        dwm = prev.dwm.overrideAttrs (old: { src = /home/will/dwm ;});
-      })       
+      })   
+    #  (import ./st-overlay.nix)
   ];
 
   # Service for gnome
@@ -134,12 +135,27 @@
      dunst
      pavucontrol
      flameshot
+     curtail
      playerctl
      symbola
      copyq
      dmenu
+#    (st.overrideAttrs (oldAttrs: rec {
+#         src = /home/will/st ;
+#
+#	 src = fetchFromGitHub {
+#	  owner = "tkuwill";
+#	  repo = "st";
+#          rev = "master";
+#	  sha256 = "0s95jgmjjnjf6lmk6k6jarfwx9nfbykyssx5gsd4i34qszjh9wz0";
+#
+#   };
+#	# Make sure you include whatever dependencies the fork needs to build properly!
+#	buildInputs = oldAttrs.buildInputs ++ [ harfbuzz xorg.libXft ];
+# }))
      i3lock-color
      feh
+     bibata-extra-cursors
      # cli tools
      acpilight
      lm_sensors
@@ -160,7 +176,8 @@
      xfce.thunar
      ## gnome programs
      gnomeExtensions.appindicator
-     gnome.adwaita-icon-theme    
+     gnome.adwaita-icon-theme
+     gnome.gnome-tweaks
    ];
 
   environment.gnome.excludePackages = (with pkgs; [
