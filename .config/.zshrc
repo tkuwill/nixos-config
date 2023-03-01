@@ -43,6 +43,7 @@ alias la="ls -la --color=auto"
 alias ls='ls --color=tty'
 alias musicDownloadTui="/home/will/shellscripts/musicDownloadTui.sh"
 
+TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # npm package
