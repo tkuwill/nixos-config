@@ -46,7 +46,7 @@
      (final: prev: {
        dwm = prev.dwm.overrideAttrs (old: { src = /home/will/dwm ;});
       })   
-    #  (import ./st-overlay.nix)
+#       (import ./st-overlay.nix)
        (import ./dmenu-overlay.nix)
   ];
 
@@ -141,6 +141,7 @@
      symbola
      copyq
      dmenu
+#     st
 #    (st.overrideAttrs (oldAttrs: rec {
 #         src = /home/will/st ;
 #
