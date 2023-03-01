@@ -47,6 +47,7 @@
        dwm = prev.dwm.overrideAttrs (old: { src = /home/will/dwm ;});
       })   
     #  (import ./st-overlay.nix)
+       (import ./dmenu-overlay.nix)
   ];
 
   # Service for gnome
