@@ -13,9 +13,9 @@ xrdb -merge ~/.Xresources &
 print_caffeine(){
     MODE=$(xset -q | grep 'DPMS is' | awk '{print $3}')
     if [ "$MODE" = "Disabled" ]; then
-        printf ":零"
+        printf " : 零"
     elif [ "$MODE" = "Enabled" ]; then
-        printf ":鈴"
+        printf " : 鈴"
     fi
 }
 
@@ -91,7 +91,7 @@ dwm_alsa () {
 
 while true
 do
-    xsetroot -name " $(print_caffeine)|$(dwm_alsa)|$(print_date)|$(dwm_battery)"
+    xsetroot -name " $(print_caffeine) |$(dwm_alsa)|$(print_date)|$(dwm_battery)"
     sleep 1 
 done
 
