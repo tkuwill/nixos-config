@@ -6,7 +6,7 @@
 
 
 function notification {
-    options="Cancel\nDo not disturb\nNormal"
+    options="Cancel\nNotification center\nDo not disturb\nNormal"
     selected=$(echo -e $options | dmenu -i -p "Notification Mode")
     if [[ $selected = "Do not disturb" ]]; then 
         notify-send -i /home/will/Pictures/sysicon/bell.png -u critical -t 3000 "Do Not Disturb is now ON." && sleep 1s && dunstctl set-paused true
@@ -14,8 +14,8 @@ function notification {
         dunstctl set-paused false && notify-send -i /home/will/Pictures/sysicon/bell-ring.png -u critical -t 8000 "Do Not Disturb is now OFF."  
     elif [[ $selected = "Cancel" ]]; then 
         return
-    # elif [[ $selected = "Notification center" ]]; then 
-	# /home/will/shellscripts/notificationcenter.sh
+    elif [[ $selected = "Notification center" ]]; then 
+	/home/will/shellscripts/notificationcenter.sh
     fi
 }
 
