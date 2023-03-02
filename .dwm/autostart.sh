@@ -7,6 +7,7 @@ copyq &
 dunst &
 /home/will/.dwm/lowbatremind.sh &
 xrdb -merge ~/.Xresources &
+source ~/.zshrc &
 # xsetroot for dwm
 
 # caffeine
