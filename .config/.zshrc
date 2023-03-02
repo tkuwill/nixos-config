@@ -18,6 +18,9 @@ bindkey "\e[8~" end-of-line
 # for tmux
 bindkey "\E[1~" beginning-of-line
 bindkey "\E[4~" end-of-line
+# for st terminal
+bindkey "^[[H" beginning-of-line
+bindkey "^[[4~" end-of-line 
 
 # Use C-x C-e to open the default editor to edit the command line
 autoload -z edit-command-line
@@ -58,3 +61,20 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+# St title
+
+# THSTATUS=`tput tsl`
+# FHSTATUS=`tput fsl`
+
+# set_xterm_title() {
+#      if tput hs ; then
+#          print -Pn "$THSTATUS$@$FHSTATUS"
+#      fi
+# }
+# preexec() {
+#     set_xterm_title "%n@%m: %50>...>$1%<<"
+# }
+# precmd() {
+#     set_xterm_title "%n@%m: %50<...<%~%<<"
+# }
