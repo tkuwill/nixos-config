@@ -5,6 +5,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
+Plug 'LnL7/vim-nix'
 " colortheme
 Plug 'morhetz/gruvbox'
 call plug#end()
