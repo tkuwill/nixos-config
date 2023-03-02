@@ -65,10 +65,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "xterm", NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "xterm", "-T", scratchpadname, "-g", "45x15", NULL };
-static const char *cmusvolcmd[] = { "xterm", "-T", scratchpadname, "-g", "45x15", "-e", "zsh", "-c", "/home/will/shellscripts/cmusvol.sh; zsh", NULL };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "45x15", NULL };
+static const char *cmusvolcmd[] = { "st", "-t", scratchpadname, "-g", "45x15", "-e", "zsh", "-c", "/home/will/shellscripts/cmusvol.sh; zsh", NULL };
 /*screenshot*/
 static const char *shotcmd[]  = { "flameshot", "full", NULL };
 static const char *shotzcmd[]  = { "flameshot", "gui", NULL };
@@ -114,7 +114,7 @@ static const char *prev[] = {"playerctl", "previous", NULL};
 static const char *play[] = {"playerctl", "play-pause", NULL};
 
 /* Show keybindings */
-static const char *showkcmd[] = {"xterm", "-T", scratchpadname, "-g", "90x25", "-e", "zsh", "-c", "bat ~/Desktop/willdezenbookArch_dotfiles/memo/dwmKeybinding.md; zsh", NULL};
+static const char *showkcmd[] = {"st", "-t", scratchpadname, "-g", "90x25", "-e", "zsh", "-c", "bat ~/Desktop/willdezenbookArch_dotfiles/memo/dwmKeybinding.md; zsh", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
