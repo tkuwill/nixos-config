@@ -46,7 +46,6 @@
      (final: prev: {
        dwm = prev.dwm.overrideAttrs (old: { src = /home/will/dwm ;});
       })   
-#       (import ./st-overlay.nix)
        (import ./dmenu-overlay.nix)
   ];
 
@@ -141,20 +140,13 @@
      symbola
      copyq
      dmenu
-#     st
-#    (st.overrideAttrs (oldAttrs: rec {
-#         src = /home/will/st ;
-#
-#	 src = fetchFromGitHub {
-#	  owner = "tkuwill";
-#	  repo = "st";
-#          rev = "master";
-#	  sha256 = "0s95jgmjjnjf6lmk6k6jarfwx9nfbykyssx5gsd4i34qszjh9wz0";
-#
-#   };
-#	# Make sure you include whatever dependencies the fork needs to build properly!
-#	buildInputs = oldAttrs.buildInputs ++ [ harfbuzz xorg.libXft ];
-# }))
+    (st.override { 
+	patches = [
+           # You can specify local patches
+           /home/will/st/patch/st-anysize-0.8.4.diff
+   
+         ];
+	conf = builtins.readFile /home/will/st/config.h; })
      i3lock-color
      feh
      bibata-extra-cursors
