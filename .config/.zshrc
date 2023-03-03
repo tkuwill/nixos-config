@@ -26,16 +26,14 @@ HISTFILE=~/.zsh_history
 HISTSIZE=99999
 SAVEHIST=99999
 HISTORY_IGNORE="(rm -rf|rm -rf .git|neofetch|vifm|musicDownloadTui|newsboat|free|uname -r|uname -a|free -h|df|df -h|htop|vim .vimrc|nmtui|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source ~/.zshrc|ls|cd|pwd|exit|cmus|la|bye|ping|mpv|yt-dlp|tmux|acpi|lazygit|live-server| ..)"
-# Use C-x C-e to open the default editor to edit the command line
-autoload -z edit-command-line
-zle -N edit-command-line
-bindkey "^X^E" edit-command-line
 bindkey -e
 
 bindkey "\e[3~" delete-char
 # for urxvt and uxterm
 bindkey "\e[7~" beginning-of-line
 bindkey "\e[8~" end-of-line
+bindkey "\e[H" beginning-of-line
+bindkey "\e[F" end-of-line
 # for tmux
 bindkey "\E[1~" beginning-of-line
 bindkey "\E[4~" end-of-line
@@ -43,6 +41,10 @@ bindkey "\E[4~" end-of-line
 bindkey "^[[H" beginning-of-line
 bindkey "^[[4~" end-of-line 
 
+# Use C-x C-e to open the default editor to edit the command line
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
 
 alias la="ls -la --color=auto"
 alias ls='ls --color=tty'
