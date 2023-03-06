@@ -1,8 +1,15 @@
 # nixos-config
 my personal nixos-config on an old ASUS laptop.
 
+<div align="center">
+	<img src="/screenshots/nixos.png">
+</div>
+
 ![](/screenshots/nix.png)
 
+- Here are some skills of using `NixOS`, `live-server` and  dotfiles used on my **NixOS**.
+- Wallpaper is from [李擎洲：九尾·妖狐][].
+[李擎洲：九尾·妖狐]: https://www.bilibili.com/video/BV1iN4y1F7pm/
 ## Files
 
 - [configuration.nix][]
@@ -45,6 +52,19 @@ To update all packages declared in NixOS’ **configuration.nix**, use:
 ```bash
 sudo nixos-rebuild switch
 ```
+
+## How to [Show all packages installed in NixOS][] ?
+
+1. Show `environment.systemPackages` in `/etc/nixos/configuration.nix`
+```bash
+nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq | bat
+```
+or
+```bash
+nix-store --query --requisites /run/current-system | cut -c 45-200 | sort | uniq | bat
+```
+
+[Show all packages installed in NixOS]: https://functor.tokyo/blog/2018-02-20-show-packages-installed-on-nixos
 
 ## How to use `live-server` in NixOS ?
 
