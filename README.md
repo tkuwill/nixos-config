@@ -20,6 +20,7 @@ my personal nixos-config on an old ASUS laptop.
 - [.zshrc][]
 - [.vimrc][]
 - [.live-server.json][]
+- [.npmrc][]
 
 [configuration.nix]: https://github.com/tkuwill/nixos-config/blob/master/etc/nixos/configuration.nix
 [.zshrc]: https://github.com/tkuwill/nixos-config/blob/master/.config/.zshrc
@@ -27,6 +28,8 @@ my personal nixos-config on an old ASUS laptop.
 [vifm]: https://github.com/tkuwill/nixos-config/tree/master/.config/vifm
 [tmux]: https://github.com/tkuwill/nixos-config/blob/master/.config/tmux/tmux.conf
 [.live-server.json]: https://github.com/tkuwill/nixos-config/blob/master/.config/.live-server.json
+[.npmrc]: https://github.com/tkuwill/nixos-config/blob/master/.config/.npmrc
+
 
 ## [How to update NixOS][]
 [How to update NixOS]: https://discourse.nixos.org/t/how-to-upgrade-packages/6151/9
