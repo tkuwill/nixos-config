@@ -40,13 +40,22 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true; 
   services.xserver.windowManager.dwm.enable = true;
+  environment.variables.XCURSOR_SIZE = "32";
   #services.xserver.windowManager.awesome.enable = true;
-  # DWM, st, dmenu, slock custom build
+  # DWM, st, dmenu, custom build
   nixpkgs.overlays = [
      (final: prev: {
        dwm = prev.dwm.overrideAttrs (old: { src = /home/will/dwm ;});
       })   
-       (import ./dmenu-overlay.nix)
+      (import ./dmenu-overlay.nix)
+      (self: super: {
+            mpv = super.mpv.override {
+              scripts = with self.mpvScripts; [ 
+                mpris 
+                mpv-playlistmanager
+              ];
+           };
+       })
   ];
 
   # Service for gnome
@@ -159,8 +168,8 @@
      w3m
      # video player
      yt-dlp
+     ffmpeg
      mpv
-     mpvScripts.mpris
      # For web-development
      nodejs
      ##
