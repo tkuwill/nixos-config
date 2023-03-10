@@ -37,7 +37,8 @@
   # Enable the X11 windowing system. Windows manager and DE
   
   services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.startx.enable = true;
+ # services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true; 
   services.xserver.windowManager.dwm.enable = true;
   environment.variables.XCURSOR_SIZE = "32";
@@ -107,7 +108,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
    users.users.will = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "audio" "video" ]; # Enable ‘sudo’ for the user. Also, audio and video
+     extraGroups = [ "wheel" "audio" "video" "networkmanager" ]; # Enable ‘sudo’ for the user. Also, audio and video
      packages = with pkgs; [
        firefox
        thunderbird
