@@ -160,6 +160,7 @@
      i3lock-color
      feh
      bibata-extra-cursors
+     oneko
      # cli tools
      acpilight
      lm_sensors
@@ -171,6 +172,7 @@
      yt-dlp
      ffmpeg
      mpv
+     simplescreenrecorder
      # For web-development
      nodejs
      ##
