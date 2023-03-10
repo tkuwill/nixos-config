@@ -7,6 +7,8 @@ copyq &
 dunst &
 /home/will/.dwm/lowbatremind.sh &
 xrdb -merge ~/.Xresources &
+oneko -fg red -sakura -position -50 &
+
 # xsetroot for dwm
 
 # caffeine
