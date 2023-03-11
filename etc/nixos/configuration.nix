@@ -162,7 +162,7 @@
      bibata-extra-cursors
      oneko
      # cli tools
-     acpilight
+     intel-gpu-tools
      lm_sensors
      acpi
      dialog
