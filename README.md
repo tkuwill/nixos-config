@@ -79,6 +79,7 @@ For system-wide, run:
 sudo nix-collect-garbage --delete-older-than 30d
 ```
 or you can run ```sudo nix-collect-garbage -d ``` to delete all old generations. (Of course, **this would make rollback impossible**.)
+
 2. Then run the rebuild command to clean **the boot entries of old generations of nixos**.
 ```nix
 sudo nixos-rebuild switch
