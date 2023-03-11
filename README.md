@@ -104,9 +104,11 @@ For per-user, run those commands without `sudo`. Check the [Nix Reference Manual
 [Delete Old Generations On NixOS]: https://ersocon.net/articles/nixos-remove-old-generations~0332c9e7-5c49-4cd9-b706-559356e31390
 
 </details>
+
 ## How to use `live-server` in NixOS ?
 
 <details>
+
 1. Check [Installing NPM Packages Globally in NixOS][] first.
     - After installing `NPM` and doing the config for npm in shell's rc, run `npm install -g live-server`.
 2. Then check [live-server's config][].
