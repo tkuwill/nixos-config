@@ -1,8 +1,8 @@
 # nixos-config
 my personal nixos-config on an old ASUS laptop.
 
-<div align="center" width="100px">
-	<img src="/screenshots/nixos.png">
+<div align="center">
+	<img width="100" src="/screenshots/nixos.png">
 </div>
 
 ![](/screenshots/nix.png)
@@ -15,6 +15,7 @@ my personal nixos-config on an old ASUS laptop.
 ## Files
 
 <details>
+
 - [configuration.nix][]
 - [vifm][]
 - [tmux][]
@@ -36,6 +37,7 @@ my personal nixos-config on an old ASUS laptop.
 ## [How to update NixOS][]
 
 <details>
+
 [How to update NixOS]: https://discourse.nixos.org/t/how-to-upgrade-packages/6151/9
 
 Steps for updating NixOS:  
@@ -63,9 +65,11 @@ sudo nixos-rebuild switch
 ```
 
 </details>
+
 ## How to [Show all packages installed in NixOS][] ?
 
 <details>
+
 1. Show `environment.systemPackages` in `/etc/nixos/configuration.nix`
 ```bash
 nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq | bat
@@ -78,9 +82,11 @@ nix-store --query --requisites /run/current-system | cut -c 45-200 | sort | uniq
 [Show all packages installed in NixOS]: https://functor.tokyo/blog/2018-02-20-show-packages-installed-on-nixos
 
 </details>
+
 ## How to [Delete Old Generations On NixOS][] ?
 
 <details>
+
 For system-wide, run:  
 1. You can change `30d` to the days you want.
 ```nix
