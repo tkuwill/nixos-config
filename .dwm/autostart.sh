@@ -8,6 +8,7 @@ dunst &
 /home/will/.dwm/lowbatremind.sh &
 xrdb -merge ~/.Xresources &
 oneko -fg red -sakura -position -50 &
+thunar --daemon &
 
 # xsetroot for dwm
 
