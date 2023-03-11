@@ -1,7 +1,7 @@
 # nixos-config
 my personal nixos-config on an old ASUS laptop.
 
-<div align="center">
+<div align="center" width="100px">
 	<img src="/screenshots/nixos.png">
 </div>
 
@@ -14,6 +14,7 @@ my personal nixos-config on an old ASUS laptop.
 
 ## Files
 
+<details>
 - [configuration.nix][]
 - [vifm][]
 - [tmux][]
@@ -30,11 +31,14 @@ my personal nixos-config on an old ASUS laptop.
 [.live-server.json]: https://github.com/tkuwill/nixos-config/blob/master/.config/.live-server.json
 [.npmrc]: https://github.com/tkuwill/nixos-config/blob/master/.config/.npmrc
 
+</details>
 
 ## [How to update NixOS][]
+
+<details>
 [How to update NixOS]: https://discourse.nixos.org/t/how-to-upgrade-packages/6151/9
 
-
+Steps for updating NixOS:  
 1. Check and set the latest channel
 ```bash
 sudo nix-channel --list
@@ -58,8 +62,10 @@ To update all packages declared in NixOS’ **configuration.nix**, use:
 sudo nixos-rebuild switch
 ```
 
+</details>
 ## How to [Show all packages installed in NixOS][] ?
 
+<details>
 1. Show `environment.systemPackages` in `/etc/nixos/configuration.nix`
 ```bash
 nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq | bat
@@ -71,8 +77,10 @@ nix-store --query --requisites /run/current-system | cut -c 45-200 | sort | uniq
 
 [Show all packages installed in NixOS]: https://functor.tokyo/blog/2018-02-20-show-packages-installed-on-nixos
 
+</details>
 ## How to [Delete Old Generations On NixOS][] ?
 
+<details>
 For system-wide, run:  
 1. You can change `30d` to the days you want.
 ```nix
@@ -89,8 +97,10 @@ For per-user, run those commands without `sudo`. Check the [Nix Reference Manual
 [Nix Reference Manual]: https://nixos.org/manual/nix/stable/package-management/garbage-collection.html
 [Delete Old Generations On NixOS]: https://ersocon.net/articles/nixos-remove-old-generations~0332c9e7-5c49-4cd9-b706-559356e31390
 
+</details>
 ## How to use `live-server` in NixOS ?
 
+<details>
 1. Check [Installing NPM Packages Globally in NixOS][] first.
     - After installing `NPM` and doing the config for npm in shell's rc, run `npm install -g live-server`.
 2. Then check [live-server's config][].
@@ -100,6 +110,7 @@ For per-user, run those commands without `sudo`. Check the [Nix Reference Manual
 [Installing NPM Packages Globally in NixOS]: https://matthewrhone.dev/nixos-npm-globally
 [live-server's config]: https://github.com/tapio/live-server/issues/105
 
+</details>
 
 
 
