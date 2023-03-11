@@ -175,9 +175,12 @@
      simplescreenrecorder
      # For web-development
      nodejs
-     ##
+     ## For office
      libreoffice-still-unwrapped
      font-manager
+     zathura
+     vimiv-qt
+
      # thunar and its plugins
      xfce.thunar
      ## gnome programs
@@ -190,6 +193,7 @@
     gnome-photos
     gnome-tour
     gnome-console
+    gnome.eog
   ]) ++ (with pkgs.gnome; [ 
     cheese
     gnome-music
@@ -203,7 +207,9 @@
     iagno
     hitori
     atomix
-    nautilus 
+    nautilus
+    eog
+
   ]);
 
  # thunar and its plugins
