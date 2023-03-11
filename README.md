@@ -71,6 +71,23 @@ nix-store --query --requisites /run/current-system | cut -c 45-200 | sort | uniq
 
 [Show all packages installed in NixOS]: https://functor.tokyo/blog/2018-02-20-show-packages-installed-on-nixos
 
+## How to [Delete Old Generations On NixOS][] ?
+
+For system-wide, run:  
+1. You can change `30d` to the days you want.
+```nix
+sudo nix-collect-garbage --delete-older-than 30d
+```
+or you can run ```sudo nix-collect-garbage -d ``` to delete all old generations. (Of course, **this would make rollback impossible**.)
+2. Then run the rebuild command to clean **the boot entries of old generations of nixos**.
+```nix
+sudo nixos-rebuild switch
+```
+For per-user, run those commands without `sudo`. Check the [Nix Reference Manual][] for more detailed information.
+
+[Nix Reference Manual]: https://nixos.org/manual/nix/stable/package-management/garbage-collection.html
+[Delete Old Generations On NixOS]: https://ersocon.net/articles/nixos-remove-old-generations~0332c9e7-5c49-4cd9-b706-559356e31390
+
 ## How to use `live-server` in NixOS ?
 
 1. Check [Installing NPM Packages Globally in NixOS][] first.
