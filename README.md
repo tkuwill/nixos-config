@@ -121,4 +121,16 @@ For per-user, run those commands without `sudo`. Check the [Nix Reference Manual
 </details>
 
 
+## Memo 
+
+<details>
+
+Next time when installing NixOS, make `/efi` (`/boot`) big enough (**like 1~2GB**), or you will have to delete boot menu constantly.(Of course, maybe it is because I care about the space of `/boot` too much).
+
+
+
+
+
+
+</details>
 
