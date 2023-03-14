@@ -28,20 +28,17 @@
 
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
+   console = {
+     font = "Lat2-Terminus16";
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkbOptions in tty.
-  # };
+   };
 
   # Enable the X11 windowing system. Windows manager and DE
   
   services.xserver.enable = true;
   services.xserver.displayManager.startx.enable = true;
- # services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true; 
   services.xserver.windowManager.dwm.enable = true;
-  #services.xserver.windowManager.awesome.enable = true;
   # DWM, st, dmenu, custom build
   nixpkgs.overlays = [
      (final: prev: {
@@ -59,7 +56,7 @@
   ];
 
   # Service for gnome
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+#  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   # Service for thunar
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
@@ -84,7 +81,12 @@
   programs.zsh.enable = true; 
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];  
-
+  # Bluetooth
+  hardware.bluetooth.package = pkgs.bluez;
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  # Sound and media keys
+  sound.mediaKeys.enable = true;
   # sudoedit's editor
   environment.variables.EDITOR = "vim";  
  # Hardware acceleration
@@ -200,9 +202,7 @@
      # thunar and its plugins
      xfce.thunar
      ## gnome programs
-     gnomeExtensions.appindicator
      gnome.adwaita-icon-theme
-     gnome.gnome-tweaks
      polkit_gnome
    ];
 
