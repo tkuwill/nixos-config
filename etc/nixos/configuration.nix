@@ -41,7 +41,6 @@
  # services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true; 
   services.xserver.windowManager.dwm.enable = true;
-  environment.variables.XCURSOR_SIZE = "32";
   #services.xserver.windowManager.awesome.enable = true;
   # DWM, st, dmenu, custom build
   nixpkgs.overlays = [
@@ -64,7 +63,23 @@
   # Service for thunar
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
-
+  # Service for polkit
+  security.polkit.enable = true;
+  systemd = {
+  user.services.polkit-gnome-authentication-agent-1 = {
+    description = "polkit-gnome-authentication-agent-1";
+    wantedBy = [ "graphical-session.target" ];
+    wants = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+    serviceConfig = {
+        Type = "simple";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        Restart = "on-failure";
+        RestartSec = 1;
+        TimeoutStopSec = 10;
+      };
+  };
+};
   # zsh's config
   programs.zsh.enable = true; 
   users.defaultUserShell = pkgs.zsh;
@@ -98,7 +113,8 @@
   # Enable sound.
  sound.enable = true;
  hardware.pulseaudio.enable = true;
-
+  # Virtualbox 
+  virtualisation.virtualbox.host.enable = true;
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
   services.xserver.libinput.mouse.naturalScrolling = true;
@@ -108,13 +124,8 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
    users.users.will = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "audio" "video" "networkmanager" ]; # Enable ‘sudo’ for the user. Also, audio and video
+     extraGroups = [ "wheel" "audio" "video" "networkmanager" "vboxusers" ]; # Enable ‘sudo’ for the user. Also, audio and video and virtualbox
      packages = with pkgs; [
-       firefox
-       thunderbird
-       chromium
-       signal-desktop
-       discord
      ];
    };
 
@@ -159,7 +170,6 @@
 	conf = builtins.readFile /home/will/st/config.h; })
      i3lock-color
      feh
-     bibata-extra-cursors
      oneko
      # cli tools
      intel-gpu-tools
@@ -180,6 +190,12 @@
      font-manager
      zathura
      vimiv-qt
+     ## Internet 
+     firefox
+     thunderbird
+     chromium
+     signal-desktop
+     discord
 
      # thunar and its plugins
      xfce.thunar
@@ -187,6 +203,7 @@
      gnomeExtensions.appindicator
      gnome.adwaita-icon-theme
      gnome.gnome-tweaks
+     polkit_gnome
    ];
 
   environment.gnome.excludePackages = (with pkgs; [
