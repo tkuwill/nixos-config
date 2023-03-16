@@ -180,6 +180,7 @@
      i3lock-color
      feh
      oneko
+     unclutter-xfixes
      # cli tools
      intel-gpu-tools
      lm_sensors
