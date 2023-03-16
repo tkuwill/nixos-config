@@ -33,7 +33,13 @@
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkbOptions in tty.
    };
+  # Power management
+  services.logind.extraConfig = ''
+    # don’t shutdown when power button is short-pressed
+    HandlePowerKey=ignore
+    HandlePowerKeyLongPress=poweroff
 
+    '';
   # Enable the X11 windowing system. Windows manager and DE
   
   services.xserver.enable = true;
@@ -142,6 +148,7 @@
      vifm
      xterm
      tmux
+     xdg-user-dirs
      xclip
      cmus
      easytag
