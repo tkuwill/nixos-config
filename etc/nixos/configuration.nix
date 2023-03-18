@@ -64,8 +64,14 @@
   # Service for gnome
 #  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   # Service for thunar
+  programs.thunar.enable = true;
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
+ # thunar and its plugins
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-volman
+    thunar-media-tags-plugin
+ ];
   # Service for polkit
   security.polkit.enable = true;
   systemd = {
@@ -208,8 +214,6 @@
      signal-desktop
      discord
 
-     # thunar and its plugins
-     xfce.thunar
      ## gnome programs
      gnome.adwaita-icon-theme
      polkit_gnome
@@ -238,10 +242,6 @@
 
   ]);
 
- # thunar and its plugins
-  programs.thunar.plugins = with pkgs.xfce; [
-           thunar-volman
- ];
 
   # Input method ibus
 #i18n.inputMethod = {
