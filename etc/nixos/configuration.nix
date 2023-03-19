@@ -97,6 +97,10 @@
   hardware.bluetooth.package = pkgs.bluez;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
+  powerManagement.resumeCommands = ''
+  rfkill block bluetooth
+  rfkill unblock bluetooth
+  '';
   # Sound and media keys
   sound.mediaKeys.enable = true;
   # sudoedit's editor
@@ -157,7 +161,6 @@
      xdg-user-dirs
      xclip
      cmus
-     easytag
      gpodder
      tree
      bat
@@ -273,7 +276,8 @@
   fira-code
   fira-code-symbols
 ];
-
+ # Change List of binary cache URLs used to obtain pre-built binaries of Nix packages.
+ nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
 
 
   # Some programs need SUID wrappers, can be configured further or are
