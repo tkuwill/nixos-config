@@ -74,21 +74,7 @@
  ];
   # Service for polkit
   security.polkit.enable = true;
-  systemd = {
-  user.services.polkit-gnome-authentication-agent-1 = {
-    description = "polkit-gnome-authentication-agent-1";
-    wantedBy = [ "graphical-session.target" ];
-    wants = [ "graphical-session.target" ];
-    after = [ "graphical-session.target" ];
-    serviceConfig = {
-        Type = "simple";
-        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-        Restart = "on-failure";
-        RestartSec = 1;
-        TimeoutStopSec = 10;
-      };
-  };
-};
+
   # zsh's config
   programs.zsh.enable = true; 
   users.defaultUserShell = pkgs.zsh;
@@ -165,6 +151,7 @@
      tree
      bat
      unar
+     gparted
      lazygit
      git
      zsh
@@ -197,7 +184,8 @@
      dialog
      libnotify
      w3m
-     wcalc
+     wcalc  # calculator
+     imagemagick # image edit command line
      # video player
      yt-dlp
      ffmpeg
@@ -219,7 +207,7 @@
 
      ## gnome programs
      gnome.adwaita-icon-theme
-     polkit_gnome
+     mate.mate-polkit
    ];
 
   environment.gnome.excludePackages = (with pkgs; [
