@@ -1,7 +1,9 @@
 #!/bin/sh
 # General stuff
-# /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-feh --bg-fill /home/will/Pictures/sysicon/wallpaper.png &
+#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/nix/store/$(ls -la /nix/store | grep 'mate-polkit-1.26.0' | grep '4096' | awk '{print $9}')/libexec/polkit-mate-authentication-agent-1 &
+#"${pkgs.mate.mate-polkit}/libexec/polkit-mate-authentication-agent-1" &
+feh --bg-fill /home/will/Pictures/sysicon/wallpapersg.JPG &
 fcitx5 &
 copyq &
 dunst &
@@ -9,7 +11,6 @@ dunst &
 xrdb -merge ~/.Xresources &
 oneko -fg red -sakura -position -50 &
 thunar --daemon &
-
 # xsetroot for dwm
 
 # caffeine
