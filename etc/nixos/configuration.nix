@@ -186,6 +186,7 @@
      w3m
      wcalc  # calculator
      imagemagick # image edit command line
+     xorg.xkill
      # video player
      yt-dlp
      ffmpeg
