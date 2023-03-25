@@ -195,7 +195,7 @@
      # For web-development
      nodejs
      ## For office
-     libreoffice-still-unwrapped
+     libreoffice-qt
      font-manager
      zathura
      vimiv-qt
