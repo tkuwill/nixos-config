@@ -49,7 +49,8 @@ bindkey "^X^E" edit-command-line
 alias la="ls -la --color=auto"
 alias ls='ls --color=tty'
 alias musicDownloadTui="/home/will/shellscripts/musicDownloadTui.sh"
-
+alias batteryrecycle="/home/will/shellscripts/batteryrecycle.sh"
+alias reminder="/home/will/shellscripts/reminder.sh"
 TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#f5f2f2,bg=#686868,bold,underline"
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
