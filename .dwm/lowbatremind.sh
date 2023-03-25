@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# From :https://www.reddit.com/r/suckless/comments/m6r71v/battery_notification_system/
 # Control variable
 # Possible values: NONE, FULL, LOW, CRITICAL
 last="NONE"
