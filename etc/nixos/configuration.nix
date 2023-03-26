@@ -194,8 +194,9 @@
      simplescreenrecorder
      # For web-development
      nodejs
-     ## For office
-     libreoffice-qt
+     ## For office, only use libreoffice-fresh package. 
+     ## Bc in NixOS, libreoffice-fresh = libreoffice-still in archlinux
+     libreoffice-fresh
      font-manager
      zathura
      vimiv-qt
