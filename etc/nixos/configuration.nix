@@ -40,6 +40,11 @@
     HandlePowerKeyLongPress=poweroff
 
     '';
+
+  # Cursor size
+  services.xserver.dpi = 96;
+  services.xserver.upscaleDefaultCursor = true;
+
   # Enable the X11 windowing system. Windows manager and DE
   
   services.xserver.enable = true;
@@ -186,6 +191,10 @@
      w3m
      wcalc  # calculator
      imagemagick # image edit command line
+     # xorg things
+     xorg.xcursorthemes
+     xorg.libXcursor
+     xorg.xcursorgen
      xorg.xkill
      # video player
      yt-dlp
