@@ -83,6 +83,19 @@ nix-store --query --requisites /run/current-system | cut -c 45-200 | sort | uniq
 
 </details>
 
+
+## How to show all boot entries in NixOS ?
+
+<details>
+
+```
+sudo nix-env -p /nix/var/nix/profiles/system --list-generations
+```
+
+
+
+</details>
+
 ## How to [Delete Old Generations On NixOS][] ?
 
 <details>
