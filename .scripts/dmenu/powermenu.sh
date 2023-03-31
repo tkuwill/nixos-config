@@ -16,7 +16,7 @@ ASUS 'll be shutdown in 1 min. Use 'shutdown -c' to cancel." && shutdown
     elif [[ $selected = "Suspend" ]]; then 
         sleep 1s && systemctl suspend
     elif [[ $selected = "Lock" ]]; then
-	i3lock-color --indicator --inside-color=#fce5ff --radius=110 --ring-width=20 --clock --time-str=%H:%M:%S --time-font=SauceCodeProNerdFont --greeter-text=Welcome_Back_Will --greeter-color=#00b300 --greeter-font=SauceCodeProNerdFont -p default -f -F -i /home/will/Pictures/sysicon/lock.jpg
+	/home/will/.scripts/dmenu/i3lock-solarized-dark.sh
     elif [[ $selected = "Cancel" ]]; then 
         return
     fi
