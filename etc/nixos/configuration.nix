@@ -29,8 +29,11 @@
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
    console = {
-     font = "Lat2-Terminus16";
-  #   keyMap = "us";
+     packages = [
+      pkgs.terminus_font
+     ];
+     font = "LatGrkCyr-12x22.psfu.gz";
+     keyMap = "us";
   #   useXkbConfig = true; # use xkbOptions in tty.
    };
   # Power management
@@ -92,6 +95,12 @@
   rfkill block bluetooth
   rfkill unblock bluetooth
   '';
+  ## Lock screen before suspend
+  programs.i3lock.enable = true;
+  programs.i3lock.package = pkgs.i3lock-color;
+  services.physlock.enable = true;
+  services.physlock.lockOn.suspend = true;
+  services.physlock.lockMessage = "Welcome Back will" ;
   # Sound and media keys
   sound.mediaKeys.enable = true;
   # sudoedit's editor
@@ -178,7 +187,6 @@
    
          ];
 	conf = builtins.readFile /home/will/st/config.h; })
-     i3lock-color
      feh
      oneko
      unclutter-xfixes
@@ -209,12 +217,14 @@
      font-manager
      zathura
      vimiv-qt
+     ## Dictionary
+     artha 
+     tagainijisho
      ## Internet 
      firefox
      thunderbird
      chromium
      signal-desktop
-     discord
 
      ## gnome programs
      gnome.adwaita-icon-theme
