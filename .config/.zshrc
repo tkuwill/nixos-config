@@ -25,7 +25,7 @@ compinit
 HISTFILE=~/.zsh_history
 HISTSIZE=99999
 SAVEHIST=99999
-HISTORY_IGNORE="(startx|rm -rf|rm -rf .git|neofetch|vifm|musicDownloadTui|newsboat|free|uname -r|uname -a|free -h|df|df -h|htop|vim .vimrc|nmtui|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source ~/.zshrc|ls|cd|pwd|exit|cmus|la|bye|ping|mpv|yt-dlp|tmux|acpi|lazygit|live-server| ..)"
+HISTORY_IGNORE="(batteryrecycle|startx|rm -rf|rm -rf .git|neofetch|vifm|musicDownloadTui|newsboat|free|uname -r|uname -a|free -h|df|df -h|htop|vim .vimrc|nmtui|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source ~/.zshrc|ls|cd|pwd|exit|cmus|la|bye|ping|mpv|yt-dlp|tmux|acpi|lazygit|live-server| ..)"
 bindkey -e
 
 bindkey "\e[3~" delete-char
@@ -51,7 +51,7 @@ alias ls='ls --color=tty'
 alias musicDownloadTui="/home/will/shellscripts/musicDownloadTui.sh"
 alias batteryrecycle="/home/will/shellscripts/batteryrecycle.sh"
 alias reminder="/home/will/shellscripts/reminder.sh"
-TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
+# TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#f5f2f2,bg=#686868,bold,underline"
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
