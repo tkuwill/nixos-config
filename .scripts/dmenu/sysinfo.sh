@@ -1,3 +1,11 @@
+███████╗██╗   ██╗███████╗██╗███╗   ██╗███████╗ ██████╗ 
+██╔════╝╚██╗ ██╔╝██╔════╝██║████╗  ██║██╔════╝██╔═══██╗
+███████╗ ╚████╔╝ ███████╗██║██╔██╗ ██║█████╗  ██║   ██║
+╚════██║  ╚██╔╝  ╚════██║██║██║╚██╗██║██╔══╝  ██║   ██║
+███████║   ██║   ███████║██║██║ ╚████║██║     ╚██████╔╝
+╚══════╝   ╚═╝   ╚══════╝╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝ 
+
+
 #!/bin/sh
 # ram.png is from <a href="https://www.flaticon.com/free-icons/ram" title="ram icons">Ram icons created by Freepik - Flaticon</a>.
 # music.png is from <a href="https://www.flaticon.com/free-icons/google-play-music" title="google play music icons">Google play music icons created by Mayor Icons - Flaticon</a>

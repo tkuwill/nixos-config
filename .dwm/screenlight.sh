@@ -1,3 +1,13 @@
+┏━━┓┃┃┃┃┃┃┃┃┓┃┃┓┃┃┃┃┃┓┃┃┏┓┃┃┃┃━━━┓┃┃┃┃┃┃┏┓┃┃┃┃┃┃┓┃
+┃┏┓┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┛┗┓┃┃┃┏━┓┃┃┃┃┃┃┃┛┗┓┃┃┃┃┃┃┃
+┃┗┛┗┓━━┓┃━━┓┃┏┓┃┃┓━━┓┗━┓┓┏┛┃┃┃┃┃┗┛━━┓━┓┃┓┏┛━┓━━┓┃┃
+┃┏━┓┃┃┓┃┃┏━┛┗┛┛┃┃┫┏┓┃┏┓┃┃┃┃┃┃┃┃┃┏┓┏┓┃┏┓┓┃┃┃┏┛┏┓┃┃┃
+┃┗━┛┃┗┛┗┓┗━┓┏┓┓┗┓┃┗┛┃┃┃┃┃┗┓┃┃┃┗━┛┃┗┛┃┃┃┃┃┗┓┃┃┗┛┃┗┓
+┗━━━┛━━━┛━━┛┛┗┛━┛┛━┓┃┛┗┛┗━┛┃┃┃━━━┛━━┛┛┗┛┗━┛┛┃━━┛━┛
+┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃━┛┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃
+┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃━━┛┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃┃
+
+
 #!/bin/sh
 # backlight up icon is from <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Marz Gallery - Flaticon</a>.
 # backlight down icon is from <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Marz Gallery - Flaticon</a>.

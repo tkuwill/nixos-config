@@ -1,3 +1,11 @@
+ ██████╗ █████╗ ███████╗███████╗███████╗██╗███╗   ██╗███████╗
+██╔════╝██╔══██╗██╔════╝██╔════╝██╔════╝██║████╗  ██║██╔════╝
+██║     ███████║█████╗  █████╗  █████╗  ██║██╔██╗ ██║█████╗  
+██║     ██╔══██║██╔══╝  ██╔══╝  ██╔══╝  ██║██║╚██╗██║██╔══╝  
+╚██████╗██║  ██║██║     ██║     ███████╗██║██║ ╚████║███████╗
+ ╚═════╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝
+
+
 #!/bin/sh
 # cup-of-drink.png is from <a href="https://www.flaticon.com/free-icons/tea" title="tea icons">Tea icons created by Freepik - Flaticon</a>.
 # sleepy.png is from <a href="https://www.flaticon.com/free-icons/tired" title="tired icons">Tired icons created by Freepik - Flaticon</a>.
