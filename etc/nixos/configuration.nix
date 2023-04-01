@@ -199,6 +199,7 @@
      w3m
      wcalc  # calculator
      imagemagick # image edit command line
+     figlet # Program for making large letters out of ordinary text
      # xorg things
      xorg.xcursorthemes
      xorg.libXcursor
