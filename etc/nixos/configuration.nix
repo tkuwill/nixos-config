@@ -82,7 +82,9 @@
  ];
   # Service for polkit
   security.polkit.enable = true;
-
+  # fzf's config
+  programs.fzf.keybindings = true;
+  programs.fzf.fuzzyCompletion = true;
   # zsh's config
   programs.zsh.enable = true; 
   users.defaultUserShell = pkgs.zsh;
@@ -191,6 +193,7 @@
      oneko
      unclutter-xfixes
      # cli tools
+     fzf
      intel-gpu-tools
      lm_sensors
      acpi
