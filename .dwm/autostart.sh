@@ -52,7 +52,7 @@ print_caffeine(){
 # dwm_date
 
 print_date(){
-	echo $(date "+%D%T")
+	echo $(date "+%D 愈 %T")
 }
 
 # by joestandring/dwm-bar
