@@ -6,22 +6,31 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
 Plug 'LnL7/vim-nix'
+Plug 'Yggdroot/indentLine'
+Plug 'preservim/nerdtree'
 " colortheme
-Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
+" vim-devicon SHOULD be the LAST one
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+" indentline config (disable the conceal for JSON and markdown)
+let g:vim_json_conceal=0
+let g:markdown_syntax_conceal=0
 
 " BACKGROUND COLOR SETTING  --------------------------------------------------------------- {{{
 
 
-let g:gruvbox_contrast_light = 'hard'
-colorscheme gruvbox
 set background=light
-
+colorscheme PaperColor
 set t_Co=256
 
 " }}}
 
 " General config --------------------------------------------------------------------------- {{{
+" Backspace
+set nocompatible
+set backspace=indent,eol,start
 set cursorline
 set wildmenu
 set splitbelow splitright
@@ -94,13 +103,16 @@ au FileType markdown setlocal foldlevel=1
 " let mapleader = "\<space>"
 " keymapping
 
+nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <C-L> :noh<cr>
 " nnoremap <F11> :set paste<cr>
 " nnoremap <F12> :set nopaste<cr>
 nnoremap <F8> :set nowrap<cr>
 nnoremap <F9> :set wrap<cr>
-nnoremap <F5> :set background=light<cr>
-nnoremap <F4> :set background=dark<cr>
+" spelling check in English
+set spelllang=en,cjk
+nnoremap <F5> :set spell<cr>
+nnoremap <F4> :set nospell<cr>
 
 " This will make esc key respond faster when having the config below.
 set ttimeoutlen=100
