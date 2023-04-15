@@ -8,7 +8,7 @@ my personal nixos-config on an old ASUS laptop.
 ![](/screenshots/nix.png)
 
 - Here are some skills of using `NixOS`, `live-server` and  dotfiles used on my **NixOS**.
-- Wallpaper is from [李擎洲：九尾·妖狐][].
+- Old wallpaper was [李擎洲：九尾·妖狐][].
 
 [李擎洲：九尾·妖狐]: https://www.bilibili.com/video/BV1iN4y1F7pm/
 
