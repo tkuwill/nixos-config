@@ -7,18 +7,15 @@
 #| ▓▓  | ▓▓ ▓▓__/ ▓▓ | ▓▓|  \ ▓▓__/ ▓▓  \__| ▓▓ | ▓▓|  \  ▓▓▓▓▓▓▓ ▓▓       | ▓▓|  \
 #| ▓▓  | ▓▓\▓▓    ▓▓  \▓▓  ▓▓\▓▓    ▓▓\▓▓    ▓▓  \▓▓  ▓▓\▓▓    ▓▓ ▓▓        \▓▓  ▓▓
 # \▓▓   \▓▓ \▓▓▓▓▓▓    \▓▓▓▓  \▓▓▓▓▓▓  \▓▓▓▓▓▓    \▓▓▓▓  \▓▓▓▓▓▓▓\▓▓         \▓▓▓▓ 
-                                                                                  
-                                                                                  
-                                                                                  
+#                                                                                  
+#                                                                                  
+#                                                                                  
 
 
 #!/bin/sh
 # General stuff
-#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /nix/store/$(ls -la /nix/store | grep 'mate-polkit' | grep '4096' | awk '{print $9}' | sed -n '$p')/libexec/polkit-mate-authentication-agent-1 &
-#"${pkgs.mate.mate-polkit}/libexec/polkit-mate-authentication-agent-1" &
 feh --bg-fill /home/will/Pictures/sysicon/wallpapersg.JPG &
-fcitx5 &
 copyq &
 dunst &
 /home/will/.dwm/lowbatremind.sh &
@@ -35,6 +32,8 @@ print_ime(){
 	printf " :us"
     elif [ "$MODE" = "pinyin" ]; then
 	printf " :zh"
+    elif [ "$MODE" = "rime" ]; then
+	printf " :ZH"
     elif [ "$MODE" = "mozc" ]; then
 	printf " :jp"
     fi
@@ -53,7 +52,7 @@ print_caffeine(){
 # dwm_date
 
 print_date(){
-	echo $(date "+%Y-%m-%d（%a）%T")
+	echo $(date "+%D%T")
 }
 
 # by joestandring/dwm-bar
@@ -72,9 +71,9 @@ dwm_battery () {
         fi
     else
         if [ "$STATUS" = "Charging" ]; then
-            printf "ﴞ %s%% %s" "$CHARGE" "$STATUS"
+            printf "ﴞ %s%% %s" "$CHARGE" 
         else
-            printf " %s%% %s" "$CHARGE" "$STATUS"
+            printf " %s%% %s" "$CHARGE" 
         fi
     fi
     printf "%s\n" "$SEP2"
