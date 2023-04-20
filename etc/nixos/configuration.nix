@@ -18,6 +18,10 @@
   # Pick only one of the below networking options.
   #  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.plugins = with pkgs; [ 
+    networkmanager-openvpn 
+    networkmanager-l2tp
+  ];
 
   # Set your time zone.
   time.timeZone = "Asia/Taipei";
@@ -69,8 +73,6 @@
        })
   ];
 
-  # Service for gnome
-#  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   # Service for thunar
   programs.thunar.enable = true;
   services.gvfs.enable = true; # Mount, trash, and other functionalities
@@ -153,7 +155,7 @@
   # $ nix search wget
    nixpkgs.config.allowUnfree = true;
    environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+     vim-full # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
      htop
      neofetch
@@ -193,6 +195,7 @@
      oneko
      unclutter-xfixes
      # cli tools
+     wirelesstools # for internet test
      fzf
      intel-gpu-tools
      lm_sensors
@@ -229,34 +232,12 @@
      thunderbird
      chromium
      signal-desktop
+     networkmanagerapplet
 
      ## gnome programs
      gnome.adwaita-icon-theme
      mate.mate-polkit
    ];
-
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
-    gnome-tour
-    gnome-console
-    gnome.eog
-  ]) ++ (with pkgs.gnome; [ 
-    cheese
-    gnome-music
-    gnome-maps
-    gnome-terminal
-    gedit
-    epiphany
-    geary
-    totem
-    tali
-    iagno
-    hitori
-    atomix
-    nautilus
-    eog
-
-  ]);
 
 
   # Input method ibus
@@ -265,19 +246,21 @@
 # ibus.engines = with pkgs.ibus-engines; [ mozc libpinyin ];
 #};
   # Input method fcitx5
-   i18n.inputMethod = {
+  i18n.inputMethod = {
    enabled = "fcitx5";
    fcitx5.addons = with pkgs; [
        fcitx5-mozc
        fcitx5-gtk
        fcitx5-lua
        fcitx5-chinese-addons
-
+       fcitx5-rime
+       fcitx5-chewing
+       fcitx5-anthy
     ];
   };
 
 
-  # Font
+# Font
   fonts.fonts = with pkgs; [
   noto-fonts
   noto-fonts-cjk
