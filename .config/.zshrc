@@ -11,6 +11,9 @@ PROMPT='%F{14} %~ ${vcs_info_msg_0_} %f
 %F{40} %#%f  '
 
 
+# See prompt theme
+autoload -Uz promptinit
+promptinit
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/will/.zshrc'
@@ -46,6 +49,7 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
+alias vpnCountry="curl ifconfig.co/country"
 alias la="ls -la --color=auto"
 alias ls='ls --color=tty'
 alias musicDownloadTui="/home/will/shellscripts/musicDownloadTui.sh"
