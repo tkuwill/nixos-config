@@ -57,6 +57,8 @@
   services.xserver.enable = true;
   services.xserver.displayManager.startx.enable = true;
   services.xserver.windowManager.dwm.enable = true;
+  services.xserver.windowManager.spectrwm.enable = true;
+  services.xserver.windowManager.i3.enable = true;
   # DWM, st, dmenu, custom build
   nixpkgs.overlays = [
      (final: prev: {
@@ -221,6 +223,7 @@
      ## For office, only use libreoffice-fresh package. 
      ## Bc in NixOS, libreoffice-fresh = libreoffice-still in archlinux
      libreoffice-fresh
+     coolreader # ebook reader
      font-manager
      zathura
      vimiv-qt
