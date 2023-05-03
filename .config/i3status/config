@@ -41,13 +41,13 @@ ethernet enp2s0 {
 }
 
 battery 0 {
-    format = "%status %percentage %remaining"
+    format = "%status %percentage"
     format_down = ""
     last_full_capacity = true
     integer_battery_capacity = true
     low_threshold = 11
     threshold_type = percentage
-    hide_seconds = true
+    # hide_seconds = true
     status_chr = " "
     status_bat = " "
     status_unk = " "
