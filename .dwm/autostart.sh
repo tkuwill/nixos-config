@@ -17,10 +17,11 @@
 /nix/store/$(ls -la /nix/store | grep 'mate-polkit' | grep '4096' | awk '{print $9}' | sed -n '$p')/libexec/polkit-mate-authentication-agent-1 &
 feh --bg-fill /home/will/Pictures/sysicon/wallpapersg.JPG &
 copyq &
-dunst &
+#dunst &
+# fcitx5 -d &
 /home/will/.dwm/lowbatremind.sh &
 xrdb -merge ~/.Xresources &
-oneko -fg red -sakura -position -50 &
+# oneko -fg red -sakura -position -50 &
 thunar --daemon &
 # xsetroot for dwm
 
