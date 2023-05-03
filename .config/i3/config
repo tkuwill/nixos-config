@@ -63,6 +63,7 @@ bindsym $mod+Shift+b exec /home/will/.scripts/dmenu/sysinfo.sh
 bindsym $mod+Shift+d exec /home/will/.scripts/dmenu/donotdisturb.sh
 bindsym $mod+Shift+o exec /home/will/.scripts/dmenu/browser.sh
 bindsym $mod+Shift+k exec /home/will/.scripts/dmenu/caffeine.sh
+bindsym $mod+Shift+p exec /home/will/.scripts/dmenu/player.sh
 # screenshot 
 bindsym $mod+Shift+q exec flameshot launcher
 bindsym $mod+Shift+a exec flameshot full
@@ -217,7 +218,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status --config ~/.config/i3status/config
+        font pango: SauceCodeProNerdFont 12
+	status_command i3status --config ~/.config/i3status/config
 	
 
 }
