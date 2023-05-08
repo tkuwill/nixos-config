@@ -209,6 +209,7 @@
      imagemagick # image edit command line
      figlet # Program for making large letters out of ordinary text
      pandoc # a universal document converter
+     tetex # latex
      # xorg things
      xorg.xcursorthemes
      xorg.libXcursor
