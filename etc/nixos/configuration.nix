@@ -208,8 +208,7 @@
      wcalc  # calculator
      imagemagick # image edit command line
      figlet # Program for making large letters out of ordinary text
-     pandoc # a universal document converter
-     tetex # latex
+     python311Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
      # xorg things
      xorg.xcursorthemes
      xorg.libXcursor
