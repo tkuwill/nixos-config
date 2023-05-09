@@ -68,6 +68,12 @@ bindsym $mod+Shift+p exec /home/will/.scripts/dmenu/player.sh
 bindsym $mod+Shift+q exec flameshot launcher
 bindsym $mod+Shift+a exec flameshot full
 bindsym $mod+Shift+z exec flameshot gui
+# scratchpad
+bindsym $mod+grave exec st -t scratchpadname -g 45x15
+# Hide the scratchpad
+bindsym $mod+minus [title="scratchpadname"] move scratchpad 
+# Show the hidden scratchpad 
+bindsym $mod+plus [title="scratchpadname"] scratchpad show
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -180,6 +186,7 @@ title_align center
 for_window [window_role="About"] floating enable
 for_window [class="copyq"] floating enable move absolute position center
 for_window [class="fcitx5"] floating enable move absolute position center
+for_window [title="scratchpadname"] floating enable move absolute position center
 
 # reload the configuration file
 bindsym $mod+Shift+r reload
