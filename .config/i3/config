@@ -31,7 +31,6 @@ exec copyq
 exec_always /home/will/.dwm/lowbatremind.sh 
 exec_always xrdb -merge ~/.Xresources
 exec thunar --daemon
-exec conky -d
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -227,8 +226,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         font pango: SauceCodeProNerdFont 12
-	status_command i3status --config ~/.config/i3status/config 
-#	| ~/.config/i3status/i3status-wrapper.sh
+	# status_command i3status --config ~/.config/i3status/config 
+	status_command i3blocks  
 
 	
 
