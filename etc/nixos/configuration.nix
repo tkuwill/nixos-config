@@ -179,6 +179,8 @@
      newsboat
      arandr
      dunst
+     conky
+     i3blocks # 
      pavucontrol
      flameshot
      curtail
