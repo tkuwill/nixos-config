@@ -45,7 +45,7 @@ exec --no-startup-id nm-applet
 
 # color
 # class        border  backgr. text    indicator
-client.focused #f7fa3e #f7fa3e #000000 #f7fa3e
+client.focused #fcbf54 #fcbf54 #000000 #fcbf54
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -233,7 +233,7 @@ bar {
     colors {
 	separator #31e8f5
 	# class           border  backgr.  text
-	focused_workspace #f7fa3e #f7fa3e #000000
+	focused_workspace #fcbf54 #fcbf54 #000000
     }
 	# status_command i3status --config ~/.config/i3status/config 
 	status_command i3blocks  
