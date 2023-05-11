@@ -14,9 +14,13 @@ interval=1
 [battery]
 command=cat /sys/class/power_supply/BAT0/capacity | awk '{print "BAT: " $1"%"}'
 interval=10
+# battery status
+[Batstatus]
+command=cat /sys/class/power_supply/BAT0/status
+interval=3
 # Update time every 1 seconds
 [time]
-command=date "+%D 愈 %T"
+command=date "+%Y/%m/%d(%a) 愈 %T"
 interval=1
 
 
