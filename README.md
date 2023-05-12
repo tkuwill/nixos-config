@@ -10,14 +10,15 @@ my personal nixos-config on an old ASUS laptop.
 	<h6>dwm</h6>
 </div>
 
-![](/screenshots/i3nix.png)
+![](/screenshots/i3nix.jpg)
 <div align="center">
 	<h6>i3</h6>
 </div>
 
 - Here are some skills of using `NixOS`, `live-server` and  dotfiles used on my **NixOS**.
-- Wallpaper are [李擎洲：九尾·妖狐][] and [彭雄渾][].
+- Wallpaper are from [李擎洲：九尾·妖狐][] and [彭雄渾][] and [Free 4k Wallpaper Photos][].
 
+[Free 4k Wallpaper Photos]: https://www.pexels.com/photo/brown-and-green-mountain-view-photo-842711/
 [李擎洲：九尾·妖狐]: https://www.bilibili.com/video/BV1iN4y1F7pm/
 [彭雄渾]: https://artouch.com/art-views/content-3244.html
 
