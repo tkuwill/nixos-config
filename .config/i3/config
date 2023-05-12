@@ -13,7 +13,8 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: SauceCodeProNerdFont 12
+# font pango: SauceCodeProNerdFont 12
+font pango: Noto Sans CJK TC Bold 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -26,8 +27,6 @@ exec --no-startup-id dex --autostart --environment i3
 exec_always /nix/store/$(ls -la /nix/store | grep 'mate-polkit' | grep '4096' | awk '{print $9}' | sed -n '$p')/libexec/polkit-mate-authentication-agent-1 
 exec feh --bg-fill /home/will/Pictures/sysicon/wallpapersg.JPG
 exec copyq
-#exec dunst
-#exec fcitx5 -d
 exec_always /home/will/.dwm/lowbatremind.sh 
 exec_always xrdb -merge ~/.Xresources
 exec thunar --daemon
@@ -191,6 +190,8 @@ for_window [window_role="About"] floating enable
 for_window [class="copyq"] floating enable move absolute position center
 for_window [class="fcitx5"] floating enable move absolute position center
 for_window [title="scratchpadname"] floating enable move absolute position center
+for_window [title="Network Connections"] floating enable move absolute position center
+for_window [title="Curtail"] floating enable move absolute position center
 
 # reload the configuration file
 bindsym $mod+Shift+r reload
@@ -229,11 +230,13 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        font pango: SauceCodeProNerdFont 12
+        font pango: SauceCodeProNerdFont Bold 12
     colors {
 	separator #31e8f5
 	# class           border  backgr.  text
 	focused_workspace #fcbf54 #fcbf54 #000000
+	active_workspace  #FFFFFF #45413b #FFFFFF
+	inactive_workspace #FFFFFF  #45413b #FFFFFF
     }
 	# status_command i3status --config ~/.config/i3status/config 
 	status_command i3blocks  
