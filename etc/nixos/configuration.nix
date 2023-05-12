@@ -209,6 +209,7 @@
      w3m
      wcalc  # calculator
      imagemagick # image edit command line
+     pngcrush # png suppressor
      figlet # Program for making large letters out of ordinary text
      python311Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
      # xorg things
