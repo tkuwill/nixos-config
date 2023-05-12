@@ -57,7 +57,6 @@
   services.xserver.enable = true;
   services.xserver.displayManager.startx.enable = true;
   services.xserver.windowManager.dwm.enable = true;
-  services.xserver.windowManager.spectrwm.enable = true;
   services.xserver.windowManager.i3.enable = true;
   # DWM, st, dmenu, custom build
   nixpkgs.overlays = [
@@ -183,7 +182,6 @@
      i3blocks # 
      pavucontrol
      flameshot
-     curtail
      playerctl
      symbola
      copyq
@@ -209,7 +207,7 @@
      w3m
      wcalc  # calculator
      imagemagick # image edit command line
-     pngcrush # png suppressor
+     pngquant # png optimizer
      figlet # Program for making large letters out of ordinary text
      python311Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
      # xorg things
