@@ -11,6 +11,11 @@ my personal nixos-config on an old ASUS laptop.
 </div>
 
 ![](/screenshots/i3nix.jpg)
+> Use i3blocks
+
+![](/screenshots/i3nix2.jpg)
+> Use polybar
+
 <div align="center">
 	<h6>i3</h6>
 </div>
