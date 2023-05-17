@@ -49,6 +49,7 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
+alias vpnLocation="curl ipinfo.io/country"
 alias vpnCountry="curl ifconfig.co/country"
 alias la="ls -la --color=auto"
 alias ls='ls --color=tty'
