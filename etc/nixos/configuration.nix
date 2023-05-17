@@ -178,8 +178,8 @@
      newsboat
      arandr
      dunst
-     conky
      i3blocks # 
+     polybar
      pavucontrol
      flameshot
      playerctl
