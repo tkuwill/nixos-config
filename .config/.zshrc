@@ -56,6 +56,7 @@ alias ls='ls --color=tty'
 alias musicDownloadTui="/home/will/shellscripts/musicDownloadTui.sh"
 alias batteryrecycle="/home/will/shellscripts/batteryrecycle.sh"
 alias reminder="/home/will/shellscripts/reminder.sh"
+alias TVbsp="/home/will/shellscripts/TVbsp.sh"
 # TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#f5f2f2,bg=#686868,bold,underline"
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
@@ -69,6 +70,7 @@ fi
 # npm package
 export PATH=~/.npm-packages/bin:$PATH
 export NODE_PATH=~/.npm-packages/lib/node_modules
+export PATH=/home/will/.local/bin:$PATH
 
 # For colorful man 
 export LESS_TERMCAP_mb=$'\e[1;32m'
