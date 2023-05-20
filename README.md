@@ -20,9 +20,23 @@ my personal nixos-config on an old ASUS laptop.
 	<h6>i3</h6>
 </div>
 
+![](/screenshots/bspnix.jpg)
+
+<div align="center">
+	<h6>bspwm</h6>
+</div>
+
 - Here are some skills of using `NixOS`, `live-server` and  dotfiles used on my **NixOS**.
 - Wallpaper are from [李擎洲：九尾·妖狐][] and [彭雄渾][] and [Free 4k Wallpaper Photos][].
+- bspwm's config is from [ghomasHudson/bspwm-dwm][]. And add some customized change like keybindings to open dmenu's scripts.
+- [TVbsp.sh][] is a script for turning off laptop's screen and setting up workspaces on the external screen.
+- [lay.sh][] is a script for showing windows layout on polybar in bspwm.
+- If you want to learn bspwm, check this: [Bspwm Basics][].
 
+[lay.sh]: https://github.com/tkuwill/nixos-config/blob/master/.config/polybar/lay.sh
+[Bspwm Basics]: https://dharmx.is-a.dev/bspwm-basics/
+[TVbsp.sh]: https://github.com/tkuwill/nixos-config/blob/master/shellscripts/TVbsp.sh
+[ghomasHudson/bspwm-dwm]: https://github.com/ghomasHudson/bspwm-dwm
 [Free 4k Wallpaper Photos]: https://www.pexels.com/photo/brown-and-green-mountain-view-photo-842711/
 [李擎洲：九尾·妖狐]: https://www.bilibili.com/video/BV1iN4y1F7pm/
 [彭雄渾]: https://artouch.com/art-views/content-3244.html
