@@ -53,6 +53,8 @@ super + {h,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+super + {a,s,w,d}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Resize floating windows, right and down for bigger wins.
 super + ctrl + Right 
@@ -62,6 +64,14 @@ super + ctrl + Down
 super + ctrl + Left
 	bspc node focused --resize right -20 0
 super + ctrl + Up 
+	bspc node focused --resize bottom 0 -20
+super + alt + d
+	bspc node focused --resize right 20 0
+super + alt + s
+	bspc node focused --resize bottom 0 20
+super + alt + a
+	bspc node focused --resize right -20 0
+super + alt + w 
 	bspc node focused --resize bottom 0 -20
 
 # wm independent hotkeys
