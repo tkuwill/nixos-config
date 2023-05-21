@@ -38,12 +38,14 @@ super + {comma,period}
 super + shift + {comma,period}
     bspc node -m {next,prev}
 
-# Fullscreen toggle
+# Monocle toggle
 super + m
     bspc desktop --layout next
 # floating
+# super + {t,f}
+	# bspc node -t {tiled,pseudo_tiled,floating}
 super + {t,f}
-	bspc node -t {tiled,pseudo_tiled,floating}
+	bspc node -t {tiled,floating}
 # Resize
 super + {h,l}
     bspwm_node_resize {west,east}
@@ -51,7 +53,17 @@ super + {h,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-#
+
+# Resize floating windows, right and down for bigger wins.
+super + ctrl + Right 
+	bspc node focused --resize right 20 0
+super + ctrl + Down
+	bspc node focused --resize bottom 0 20
+super + ctrl + Left
+	bspc node focused --resize right -20 0
+super + ctrl + Up 
+	bspc node focused --resize bottom 0 -20
+
 # wm independent hotkeys
 #
 # volume control
