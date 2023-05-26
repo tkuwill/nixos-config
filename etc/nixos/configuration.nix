@@ -13,7 +13,9 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
+  boot.kernel.sysctl = {
+    "kernel.sysrq" = 1;
+  };
   networking.hostName = "willNixOS"; # Define your hostname.
   # Pick only one of the below networking options.
   #  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -58,6 +60,9 @@
   services.xserver.displayManager.startx.enable = true;
   services.xserver.windowManager.dwm.enable = true;
   services.xserver.windowManager.i3.enable = true;
+  services.xserver.windowManager.bspwm.enable = true;
+  services.xserver.windowManager.bspwm.sxhkd.package = pkgs.sxhkd;
+  services.xserver.windowManager.bspwm.sxhkd.configFile = /home/will/.config/sxhkd/bspwm-sxhkdrc;
   # DWM, st, dmenu, custom build
   nixpkgs.overlays = [
      (final: prev: {
@@ -194,7 +199,6 @@
          ];
 	conf = builtins.readFile /home/will/st/config.h; })
      feh
-     oneko
      unclutter-xfixes
      # cli tools
      wirelesstools # for internet test
@@ -206,10 +210,13 @@
      libnotify
      w3m
      wcalc  # calculator
+     bc # GNU software calculator
      imagemagick # image edit command line
      pngquant # png optimizer
      figlet # Program for making large letters out of ordinary text
      python311Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
+     jq # for json query
+     sxhkd
      # xorg things
      xorg.xcursorthemes
      xorg.libXcursor
