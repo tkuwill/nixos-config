@@ -1,4 +1,5 @@
 #!/bin/sh
+# Description: powermenu used by tofi
 
 function ck {
     date "+%T"

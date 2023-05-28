@@ -1,4 +1,5 @@
 #!/bin/sh
+# Description: a menu run by tofi which can show system info.
 
 function ck {
     date "+%T"
