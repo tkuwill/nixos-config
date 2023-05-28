@@ -63,6 +63,10 @@
   services.xserver.windowManager.bspwm.enable = true;
   services.xserver.windowManager.bspwm.sxhkd.package = pkgs.sxhkd;
   services.xserver.windowManager.bspwm.sxhkd.configFile = /home/will/.config/sxhkd/bspwm-sxhkdrc;
+  # hyprland config
+  programs.hyprland.enable = true;
+  programs.hyprland.xwayland.enable = true;
+  programs.hyprland.xwayland.hidpi = true;
   # DWM, st, dmenu, custom build
   nixpkgs.overlays = [
      (final: prev: {
@@ -201,6 +205,7 @@
      feh
      unclutter-xfixes
      # cli tools
+     fbterm # for cjk in tty
      wirelesstools # for internet test
      fzf
      intel-gpu-tools
@@ -249,6 +254,12 @@
      ## gnome programs
      gnome.adwaita-icon-theme
      mate.mate-polkit
+     ## wayland
+     foot
+     wayst
+     swaylock
+     tofi 
+     waybar
    ];
 
 
