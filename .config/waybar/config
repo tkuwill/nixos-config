@@ -88,7 +88,7 @@
         "format-alt": "{capacity}% {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [" ", " ", " ", " ", " "]
     },
     "battery#bat2": {
         "bat": "BAT2"
