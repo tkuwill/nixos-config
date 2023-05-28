@@ -262,7 +262,6 @@
      mate.mate-polkit
      ## wayland
      foot
-     clipman
      swaylock-effects
      tofi 
      hyprpaper
