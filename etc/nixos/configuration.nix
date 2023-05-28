@@ -66,7 +66,8 @@
   # hyprland config
   programs.hyprland.enable = true;
   programs.hyprland.xwayland.enable = true;
-  programs.hyprland.xwayland.hidpi = true;
+  # programs.hyprland.xwayland.hidpi = true;
+  security.pam.services.swaylock = {}; 
   # DWM, st, dmenu, custom build
   nixpkgs.overlays = [
      (final: prev: {
@@ -80,7 +81,12 @@
                 mpv-playlistmanager
               ];
            };
-       })
+         })
+      (self: super: {
+        waybar = super.waybar.overrideAttrs (oldAttrs: {
+        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+        });
+      })
   ];
 
   # Service for thunar
@@ -256,10 +262,15 @@
      mate.mate-polkit
      ## wayland
      foot
-     wayst
-     swaylock
+     clipman
+     swaylock-effects
      tofi 
+     hyprpaper
      waybar
+     font-awesome
+     # screenshots tools
+     slurp
+     grim
    ];
 
 
