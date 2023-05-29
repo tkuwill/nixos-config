@@ -26,13 +26,26 @@ my personal nixos-config on an old ASUS laptop.
 	<h6>bspwm</h6>
 </div>
 
+![](/screenshots/hypr.png)
+
+<div align="center">
+	<h6>hyprland</h6>
+</div>
+
+
 - Here are some skills of using `NixOS`, `live-server` and  dotfiles used on my **NixOS**.
 - Wallpaper are from [李擎洲：九尾·妖狐][] and [彭雄渾][] and [Free 4k Wallpaper Photos][].
 - bspwm's config is from [ghomasHudson/bspwm-dwm][]. And add some customized change like keybindings to open dmenu's scripts.
 - [TVbsp.sh][] is a script for turning off laptop's screen and setting up workspaces on the external screen.
 - [lay.sh][] is a script for showing windows layout on polybar in bspwm.
 - If you want to learn bspwm, check this: [Bspwm Basics][].
+- I use [tofi][] as a replacement of dmenu in Hyprland.
+- In NixOS, you should use an [overlay][] to fix the waybar's workspace module if you want to use Hyprland. (In my config, it can show workspaces but it can not be clicked.)
 
+
+
+[overlay]: https://github.com/tkuwill/nixos-config/blob/master/etc/nixos/configuration.nix#LL85C16-L85C16
+[tofi]: https://github.com/philj56/tofi
 [lay.sh]: https://github.com/tkuwill/nixos-config/blob/master/.config/polybar/lay.sh
 [Bspwm Basics]: https://dharmx.is-a.dev/bspwm-basics/
 [TVbsp.sh]: https://github.com/tkuwill/nixos-config/blob/master/shellscripts/TVbsp.sh
