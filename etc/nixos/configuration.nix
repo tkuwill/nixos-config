@@ -175,6 +175,7 @@
      wget
      htop
      neofetch
+     pfetch
      vifm
      xterm
      tmux
@@ -237,7 +238,7 @@
      yt-dlp
      ffmpeg
      mpv
-     simplescreenrecorder
+     obs-studio
      # For web-development
      nodejs
      ## For office, only use libreoffice-fresh package. 
