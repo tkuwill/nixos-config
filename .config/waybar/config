@@ -60,13 +60,13 @@
         }
     },
     "tray": {
-        "icon-size": 21,
+	"icon-size": 21,
         "spacing": 5
     },
     "custom/copy": {
       "format": "🖇️", 
       "tooltip": false,
-      "on-click": "sh $HOME/.config/tofi/scripts/clip.sh"
+      "on-click-right": "/home/will/.config/tofi/scripts/clip.sh"
     },
 
     "clock": {
