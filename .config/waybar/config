@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "battery", "tray", "clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "battery", "tray", "custom/copy", "clock"],
     // Modules configuration
      "wlr/workspaces": {
       "format": "{name}",
@@ -63,12 +63,18 @@
         "icon-size": 21,
         "spacing": 5
     },
+    "custom/copy": {
+      "format": "🖇️", 
+      "tooltip": false,
+      "on-click": "sh $HOME/.config/tofi/scripts/clip.sh"
+    },
+
     "clock": {
         "timezone": "Asia/Taipei",
 	"interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 	"format": "{:%H:%M:%S}",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d(%a)}"
     },
     "backlight": {
         // "device": "acpi_video1",

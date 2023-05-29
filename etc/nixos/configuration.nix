@@ -261,6 +261,8 @@
      gnome.adwaita-icon-theme
      mate.mate-polkit
      ## wayland
+     wl-clipboard
+     cliphist
      foot
      swaylock-effects
      tofi 
