@@ -7,11 +7,11 @@ function now_play {
 }
 
 function urls {
-    copyq read
+    cliphist list | sed '1 q' | awk '{print $2}'
 }
 
 function burls {
-    copyq read | cut -c 1-44
+    cliphist list | sed '1 q' | awk '{print $2}'
 }
 
 if (ps -a | grep tofi >/dev/null); then
