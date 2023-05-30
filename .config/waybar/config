@@ -61,12 +61,13 @@
     },
     "tray": {
 	"icon-size": 21,
-        "spacing": 5
+        "spacing": 5,
+	"tooltip": true
     },
     "custom/copy": {
-      "format": "🖇️", 
-      "tooltip": false,
-      "on-click-right": "/home/will/.config/tofi/scripts/clip.sh"
+      "format": "🖇️" , 
+      "on-click-right": "/home/will/.config/tofi/scripts/clip.sh",
+      "on-triple-click-middle": "cliphist wipe"
     },
 
     "clock": {
