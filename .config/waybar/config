@@ -67,7 +67,7 @@
     "custom/copy": {
       "format": "🖇️" , 
       "on-click-right": "/home/will/.config/tofi/scripts/clip.sh",
-      "on-triple-click-middle": "cliphist wipe"
+      "on-double-click-middle": "/home/will/.config/tofi/scripts/clipclean.sh"
     },
 
     "clock": {

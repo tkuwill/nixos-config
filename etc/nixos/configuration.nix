@@ -68,6 +68,8 @@
   programs.hyprland.xwayland.enable = true;
   # programs.hyprland.xwayland.hidpi = true;
   security.pam.services.swaylock = {}; 
+  services.pipewire.enable = true;
+  services.pipewire.wireplumber.enable = true;
   # DWM, st, dmenu, custom build
   nixpkgs.overlays = [
      (final: prev: {
@@ -296,6 +298,7 @@
      waybar
      font-awesome
      # screenshots tools
+     swappy
      slurp
      grim
    ];
