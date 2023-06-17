@@ -4,8 +4,8 @@ font-size = 18
 
 # Window Style
 horizontal = true
-anchor = top
-width = 100%
+# anchor = top
+width = 70%
 height = 48
 
 outline-width = 0
