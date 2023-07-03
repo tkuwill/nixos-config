@@ -59,7 +59,6 @@
   services.xserver.enable = true;
   services.xserver.displayManager.startx.enable = true;
   services.xserver.windowManager.dwm.enable = true;
-  services.xserver.windowManager.i3.enable = true;
   services.xserver.windowManager.bspwm.enable = true;
   services.xserver.windowManager.bspwm.sxhkd.package = pkgs.sxhkd;
   services.xserver.windowManager.bspwm.sxhkd.configFile = /home/will/.config/sxhkd/bspwm-sxhkdrc;
@@ -177,7 +176,6 @@
      wget
      htop
      neofetch
-     pfetch
      vifm
      xterm
      tmux
@@ -196,7 +194,6 @@
      newsboat
      arandr
      dunst
-     i3blocks # 
      polybar
      pavucontrol
      flameshot
@@ -214,6 +211,7 @@
      feh
      unclutter-xfixes
      # cli tools
+     killall
      fbterm # for cjk in tty
      wirelesstools # for internet test
      fzf
@@ -337,7 +335,7 @@
   fira-code-symbols
 ];
  # Change List of binary cache URLs used to obtain pre-built binaries of Nix packages.
- nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
+ #nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
 
 
   # Some programs need SUID wrappers, can be configured further or are
