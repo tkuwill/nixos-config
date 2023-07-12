@@ -153,7 +153,7 @@
  sound.enable = true;
  hardware.pulseaudio.enable = true;
   # Virtualbox 
-  virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enable = true;
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
   services.xserver.libinput.mouse.naturalScrolling = true;
@@ -163,7 +163,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
    users.users.will = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "audio" "video" "networkmanager" "vboxusers" ]; # Enable ‘sudo’ for the user. Also, audio and video and virtualbox
+     extraGroups = [ "wheel" "audio" "video" "networkmanager" ]; # Enable ‘sudo’ for the user. Also, audio and video and virtualbox
      packages = with pkgs; [
      ];
    };
