@@ -79,7 +79,7 @@
         "timezone": "Asia/Taipei",
 	"interval": 1,
 	"format": "{:%H:%M:%S}",
-        "format-alt": "{:%Y-%m-%d(%a)}"
+        "format-alt": "{:%Y-%m-%d(%a)}",
 	"tooltip-format": "<tt><small>{calendar}</small></tt>",
 	"calendar": {
                   "mode"          : "months",
