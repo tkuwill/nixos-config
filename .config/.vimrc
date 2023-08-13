@@ -8,6 +8,9 @@ Plug 'ap/vim-css-color'
 Plug 'LnL7/vim-nix'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdtree'
+Plug 'justinmk/vim-sneak'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
 " colortheme
 Plug 'NLKNguyen/papercolor-theme'
 " vim-devicon SHOULD be the LAST one
@@ -22,6 +25,7 @@ let g:markdown_syntax_conceal=0
 
 
 set background=light
+" set background=dark
 colorscheme PaperColor
 set t_Co=256
 
@@ -32,6 +36,7 @@ set t_Co=256
 set nocompatible
 set backspace=indent,eol,start
 set cursorline
+set cursorcolumn
 set wildmenu
 set splitbelow splitright
 set ruler
@@ -47,7 +52,6 @@ set ai
 set shortmess-=S
 " }}}
 
-" set laststatus=2
 " Some funky status bar code its seems
 " https://stackoverflow.com/questions/9065941/how-can-i-change-vim-status-line-colour
 " Formats the statusline ------------------------------------------------------------------- {{{
@@ -111,7 +115,7 @@ nnoremap <F8> :set nowrap<cr>
 nnoremap <F9> :set wrap<cr>
 " spelling check in English
 set spelllang=en,cjk
-nnoremap <F5> :set spell<cr>
+nnoremap <F3> :set spell<cr>
 nnoremap <F4> :set nospell<cr>
 
 " This will make esc key respond faster when having the config below.

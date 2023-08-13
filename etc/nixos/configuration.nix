@@ -177,6 +177,7 @@
      htop
      neofetch
      vifm
+     joshuto
      xterm
      tmux
      xdg-user-dirs
