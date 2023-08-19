@@ -178,12 +178,10 @@
     git
     zsh
     newsboat
-    arandr
     dunst
     pavucontrol
     playerctl
     symbola
-    unclutter-xfixes
     # cli tools
     killall
     fbterm # for cjk in tty
@@ -203,7 +201,6 @@
     python311Packages.grip # Preview GitHub Markdown files like Readme locally before committing them
     jq # for json query
     shellcheck
-    sxhkd
     # video player
     yt-dlp
     ffmpeg
