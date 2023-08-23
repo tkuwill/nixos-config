@@ -1,5 +1,6 @@
 auto-reload yes
 browser firefox
+include ~/.newsboat/colorcli.config
 
 unbind-key j 
 unbind-key J
