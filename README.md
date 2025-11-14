@@ -1,3 +1,6 @@
+# 2025/11/15 UPDATED: NOW I go back to Windows, so this repository won't update anymore.
+
+
 # nixos-config
 my personal nixos-config on an old ASUS laptop.
 
